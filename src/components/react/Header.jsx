@@ -1,7 +1,6 @@
 import {
   AppBar,
   Button,
-  Drawer,
   IconButton,
   Menu,
   MenuItem,
@@ -12,15 +11,16 @@ import { Box } from '@mui/system';
 import React from 'react';
 
 import MenuIcon from '@mui/icons-material/Menu';
-import { isDrawerOpen } from './Drawer';
+import Drawer, { isDrawerOpen } from './DrawerComponent';
 import { useStore } from '@nanostores/react';
 
 const Header = () => {
-  const drawerStore = useStore(isDrawerOpen)
-  
+  const open = useStore(isDrawerOpen);
+
   // header component implemented with MUI
   return (
     <Box>
+      {open && <Drawer />}
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -29,7 +29,7 @@ const Header = () => {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-            onClick={() => {}}
+            onClick={() => isDrawerOpen.set(!isDrawerOpen.get())}
           >
             <MenuIcon />
           </IconButton>
@@ -37,7 +37,6 @@ const Header = () => {
             EC App
           </Typography>
           <Button color="inherit">Login</Button>
-          <Drawer />
 
           {/* yeah after i get the stores and stuff figured out */}
           {/* {auth && (
