@@ -20,9 +20,17 @@
   "dependencies": {
     "@astrojs/react": "^2.1.0",
     "@astrojs/solid-js": "^2.1.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.13",
+    "@nanostores/react": "^0.4.1",
+    "@nanostores/solid": "^0.3.2",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "cypress": "^10.0.3",
+    "nanostores": "^0.7.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "solid-js": "^1.6.14"
