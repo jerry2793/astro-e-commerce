@@ -18,8 +18,13 @@
     "prettier-plugin-astro": "^0.8.0"
   },
   "dependencies": {
+    "@astrojs/react": "^2.1.0",
     "@astrojs/solid-js": "^2.1.0",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
     "cypress": "^10.0.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "solid-js": "^1.6.14"
   }
 }
